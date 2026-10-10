@@ -1,6 +1,5 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const leftNav = document.querySelector('.nav-left');
-const rightNav = document.querySelector('.nav-right');
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
 if (menuToggle && leftNav) {
@@ -23,8 +22,3 @@ if (menuToggle && leftNav) {
     }
   });
 }
-rightNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Open navigation');
-    rightNav.classList.remove('is-open');
-}));
